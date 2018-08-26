@@ -1,0 +1,14 @@
+{
+   "globals": {
+      "document": true,
+      "fetch": false
+   },
+   "parser": "babel-eslint",
+   "rules": {
+      "no-underscore-dangle": [0]
+   },
+   "extends": [
+      "airbnb",
+      "plugin:prettier/recommended"
+   ]
+}

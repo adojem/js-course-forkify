@@ -1,0 +1,35 @@
+.btn {
+   &,
+   &-small,
+   &-small:link,
+   &-small:visited {
+      background-image: linear-gradient(to right bottom, $yellow, $pink);
+      border-radius: 10rem;
+      border: none;
+      text-transform: uppercase;
+      color: #ffffff;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      transition: all .2s;
+   }
+
+   &:focus,
+   &-small-focus {
+      outline: none;
+   }
+
+   &:hover,
+   &-small:hover {
+      transform: scale(1.05);
+   }
+
+   padding: 1.3rem 3rem;
+   font-size: 1.4rem;
+
+   & svg {
+      height: 2.25rem;
+      width: 2.25rem;
+      fill: currentColor;
+   }
+}

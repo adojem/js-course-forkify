@@ -1,0 +1,12 @@
+.header {
+   grid-area: head;
+   background-color: #f9f5f3;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   &__logo {
+      display: block;
+      height: 4.5rem;
+   }
+}

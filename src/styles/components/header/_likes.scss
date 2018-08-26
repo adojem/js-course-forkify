@@ -1,0 +1,24 @@
+.likes {
+   position: relative;
+   align-self: stretch;
+   padding: 0 !important;
+
+   &__field {
+      cursor: pointer;
+      padding: 0 4rem;
+      display: flex;
+      align-items: center;
+      height: 100%;
+   }
+
+   &__icon {
+      fill: #f59a83;
+      height: 3.75rem;
+      width: 3.75rem;
+   }
+
+   &__panel {
+      background-color: #fff;
+      box-shadow: 00.8rem 5rem 2rem rgba(101,90,86, .1);
+   }
+}
