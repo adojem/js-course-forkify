@@ -3,3 +3,4 @@ yarn-error.log
 dist/css/
 dist/js/
 dist/index.html
+src/config/

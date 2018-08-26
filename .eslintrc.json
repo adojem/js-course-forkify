@@ -8,7 +8,7 @@
       "no-underscore-dangle": [0]
    },
    "extends": [
-      "airbnb",
+      "airbnb-base",
       "plugin:prettier/recommended"
    ]
 }

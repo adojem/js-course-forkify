@@ -1,4 +1,12 @@
-import num from './test';
-const x = 23;
+import axios from 'axios';
+import apiKey from '../config/config';
 
-console.log(`I imported ${num} from module called test.js! Variable x is ${x}`);
+async function getResults(query) {
+   const res = await axios(
+      `http://food2fork.com/api/search?key=${apiKey}&q=${query}`
+   );
+   const { recipes } = res.data;
+   console.log(recipes);
+}
+
+getResults('pizza');
