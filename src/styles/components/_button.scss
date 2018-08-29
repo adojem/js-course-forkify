@@ -3,7 +3,7 @@
    &-small,
    &-small:link,
    &-small:visited {
-      background-image: linear-gradient(to right bottom, $yellow, $pink);
+      background-image: linear-gradient(to right bottom, $secondary-color, $primary-color);
       border-radius: 10rem;
       border: none;
       text-transform: uppercase;
