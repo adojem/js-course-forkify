@@ -62,4 +62,24 @@
       text-transform: uppercase;
       font-weight: 600;
    }
+
+   &__pages {
+      margin-top: 3rem;
+      padding: 0 3rem;
+
+      &::after {
+         content: '';
+         display: table;
+         clear: both;
+      }
+   }
+
+   &__btn--prev {
+      float: left;
+      flex-direction: row-reverse;
+   }
+
+   &__btn--next {
+      float: right;
+   }
 }

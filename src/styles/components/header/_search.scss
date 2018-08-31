@@ -4,6 +4,12 @@
    display: flex;
    align-items: center;
    padding-left: 3rem;
+   transition: all .3s;
+
+   &:focus-within {
+      transform: translateY(-2px);
+      box-shadow: 0 0.7rem 3rem rgba(101,90,86, 0.08);
+   }
 
    &__field {
       border: none;
@@ -15,6 +21,9 @@
 
       &:focus {
          outline: none;
+      }
+      &:focus::placeholder {
+         color: #dad0cc;
       }
 
       &:placeholder {

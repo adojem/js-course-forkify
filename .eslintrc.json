@@ -5,10 +5,14 @@
    },
    "parser": "babel-eslint",
    "rules": {
-      "no-underscore-dangle": [0]
+      "no-underscore-dangle": [0],
+      "prettier/prettier": "error"
    },
    "extends": [
       "airbnb-base",
       "plugin:prettier/recommended"
+   ],
+   "plugins": [
+      "prettier"
    ]
 }
