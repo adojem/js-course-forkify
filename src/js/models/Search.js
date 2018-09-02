@@ -8,8 +8,16 @@ export default class Search {
 
    async getResults() {
       try {
+         // const res = await axios({
+         //    method: 'get',
+         //    url: 'https://www.food2fork.com/api/search',
+         //    data: {
+         //       key: apiKey,
+         //       q: this.query,
+         //    },
+         // });
          const res = await axios(
-            `http://food2fork.com/api/search?key=${apiKey}&q=${this.query}`
+            `https://www.food2fork.com/api/search?key=${apiKey}&q=${this.query}`
          );
          this.result = res.data.recipes;
       } catch (error) {
