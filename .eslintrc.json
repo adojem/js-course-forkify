@@ -1,18 +1,14 @@
 {
-   "globals": {
-      "document": true,
-      "fetch": false
+   "env": {
+      "browser": true
    },
    "parser": "babel-eslint",
    "rules": {
-      "no-underscore-dangle": [0],
-      "prettier/prettier": "error"
+      "indent": ["error", 3, { "SwitchCase": 1}],
+      "brace-style": ["error", "stroustrup"],
+      "implicit-arrow-linebreak": ["off"]
    },
    "extends": [
-      "airbnb-base",
-      "plugin:prettier/recommended"
-   ],
-   "plugins": [
-      "prettier"
+      "airbnb-base"
    ]
 }
