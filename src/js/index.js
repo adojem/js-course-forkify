@@ -57,19 +57,19 @@ elements.searchResPages.addEventListener('click', (e) => {
  */
 const controlRecipe = async () => {
    const id = window.location.hash.replace('#', '');
-   console.log(id);
 
    if (id) {
       state.recipe = new Recipe(id);
 
       try {
          await state.recipe.getRecipe();
+         state.recipe.parseIngredients();
+
          state.recipe.calcTime();
          state.recipe.calcServings();
-
-         console.log(state.recipe);
       }
       catch (err) {
+         console.log(err);
          alert('Error processing recipe!');
       }
    }
