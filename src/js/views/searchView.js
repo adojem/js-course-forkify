@@ -48,9 +48,7 @@ const createButton = (page, type) => `
 }>
       <span>Page ${type === 'prev' ? page - 1 : page + 1}</span>
       <svg class="search__icon">
-         <use href="img/icons.svg#icon-triangle-${
-            type === 'prev' ? 'left' : 'right'
-         }"></use>
+         <use href="img/icons.svg#icon-triangle-${type === 'prev' ? 'left' : 'right'}"></use>
       </svg>
    </button>
 `;
@@ -61,12 +59,14 @@ const renderButtons = (page, numResults, resPerPage) => {
    let button;
    if (page === 1 && pages > 1) {
       button = createButton(page, 'next');
-   } else if (page < pages) {
+   }
+   else if (page < pages) {
       button = `
          ${createButton(page, 'prev')}
          ${createButton(page, 'next')}
       `;
-   } else if (page === pages && pages > 1) {
+   }
+   else if (page === pages && pages > 1) {
       button = createButton(page, 'prev');
    }
    elements.searchResPages.insertAdjacentHTML('afterbegin', button);

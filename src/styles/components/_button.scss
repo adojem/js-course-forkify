@@ -33,6 +33,20 @@
       fill: currentColor;
    }
 
+   &-small,
+   &-small:link,
+   &-small:visited {
+      padding: 1rem 1.75rem;
+      font-size: 1.3rem;
+      text-decoration: none;
+
+      & svg {
+         height: 1.5rem;
+         width: 1.5rem;
+         fill: currentColor;
+      }
+   }
+
    &-inline {
       color: $primary-color-light;
       font-size: 1.2rem;
@@ -64,5 +78,36 @@
       & span {
          margin: 0 0.4rem;
       }
+   }
+
+   &-tiny {
+      height: 1.75rem;
+      width: 1.75rem;
+      border: none;
+      background: none;
+      cursor: pointer;
+
+      & svg {
+         height: 100%;
+         width: 100%;
+         fill: $primary-color-light;
+         transition: all .3s;
+      }
+
+      &:focus {
+         outline: none;
+      }
+
+      &:hover svg {
+         fill: $primary-color;
+         transform: translateY(-1px);
+      }
+
+      &:active svg {
+         fill: $primary-color;
+         transform: translateY(0);
+      }
+
+      
    }
 }

@@ -1,0 +1,166 @@
+.recipe {
+   background-color: $off-white;
+   border-top: 1px solid #fff;
+
+   &__fig {
+      position: relative;
+      height: 30rem;
+   }
+
+   &__img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+
+   &__title {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 70%;
+      color: #fff;
+      font-weight: 700;
+      font-size: 2.75rem;
+      line-height: 1.95;
+      text-align: center;
+      text-transform: uppercase;
+      transform: translate(-50%, 20%) skewY(-6deg);
+
+      & span {
+         -webkit-box-decoration-break: clone;
+         box-decoration-break: clone;
+         padding: 1.3rem 2rem;
+         background-image: linear-gradient(to right bottom, $primary-color-dark, $primary-color);
+      }
+   }
+
+   &__details {
+      display: flex;
+      align-items: center;
+      padding: 8rem 3rem 3rem 3rem;
+      
+   }
+
+   &__info {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+
+      &:not(:last-child) {
+         margin-right: 4rem;
+      }
+
+      &-icon {
+         height: 2rem;
+         width: 2rem;
+         fill: $primary-color-light;
+         margin-right: 1rem;
+      }
+
+      &-data {
+         margin-right: 0.4rem;
+         font-weight: 600;
+      }
+
+      &-buttons {
+         display: flex;
+         margin-left: 1.5rem;
+         visibility: hidden;
+         opacity: 0;
+         transform: translateY(5px);
+         transition: all .4s;
+      }
+   }
+
+   &:hover .recipe__info-buttons {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+   }
+
+   &__love {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 4.5rem;
+      width: 4.5rem;
+      margin-left: auto;
+      border-radius: 50%;
+      border: none;
+      background-image: linear-gradient(to right bottom, $secondary-color, $primary-color);
+      cursor: pointer;
+
+      &:hover {
+         transform: scale(1.07);
+      }
+
+      &:focus {
+         outline: none;
+      }
+
+      & svg {
+         height: 2.74rem;
+         width: 2.75rem;
+         fill: #fff;
+      }
+   }
+
+   &__ingredients {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 4rem 5rem;
+      background-color: #f2efee;
+      font-size: 1.5rem;
+      line-height: 1.4;
+   }
+
+   &__ingredient-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 1.5rem;
+      grid-row-gap: 2.5rem;
+      list-style: none;
+      margin-bottom: 3rem;
+   }
+
+   &__item {
+      display: flex;
+   }
+
+   &__icon {
+      height: 1.8rem;
+      width: 1.8rem;
+      fill: $primary-color-light;
+      border-right: 1px solid $primary-color-light;
+      border-radius: 50%;
+      padding: 2px;
+      margin-top: 0.1rem;
+      margin-right: 1rem;
+      flex: 0 0 auto;
+   }
+
+   &__count {
+      margin-right: 0.5rem;
+      flex: 0 0 auto;
+   }
+
+   &__directions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 4rem;
+      padding-bottom: 5rem;
+
+      &-text {
+         width: 90%;
+         margin-bottom: 3rem;
+         font-size: 1.5rem;
+         text-align: center;
+         color: #968b87;
+      }
+   }
+
+}
