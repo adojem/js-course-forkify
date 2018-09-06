@@ -6,19 +6,19 @@ module.exports = {
    entry: ['babel-polyfill', './src/js/index.js', './src/styles/style.scss'],
    output: {
       path: path.resolve(__dirname, 'dist'),
-      filename: 'js/bundle.js'
+      filename: 'js/bundle.js',
    },
    devServer: {
-      contentBase: './dist'
+      contentBase: './dist',
    },
    plugins: [
       new HtmlWebpackPlugin({
          filename: 'index.html',
-         template: './src/index.html'
+         template: './src/index.html',
       }),
       new MiniCSSExtractPlugin({
-         filename: 'css/style.css'
-      })
+         filename: 'css/style.css',
+      }),
    ],
    devtool: 'source-map',
    module: {
@@ -30,32 +30,32 @@ module.exports = {
                {
                   loader: 'css-loader',
                   options: {
-                     sourceMap: true
-                  }
+                     sourceMap: true,
+                  },
                },
                {
                   loader: 'postcss-loader',
                   options: {
                      sourceMap: true,
-                     plugisn: [require('autoprefixer')({ grid: true })]
-                  }
+                     plugisn: [require('autoprefixer')({ grid: true })],
+                  },
                },
                {
                   loader: 'sass-loader',
                   options: {
-                     sourceMap: true
-                  }
+                     sourceMap: true,
+                  },
                },
-               'csscomb-loader'
-            ]
+               'csscomb-loader',
+            ],
          },
          {
             test: /\.js$/,
             exclude: /node_modules/,
             use: {
-               loader: 'babel-loader'
-            }
-         }
-      ]
-   }
+               loader: 'babel-loader',
+            },
+         },
+      ],
+   },
 };

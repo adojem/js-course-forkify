@@ -5,17 +5,24 @@
       list-style: none;
    }
 
-   &__link:link,
-   &__link:visited {
-      display: flex;
-      align-items: center;
-      padding: 1.5rem 3rem;
+   &__link {
 
-      border-right: 1px solid #fff;
-      text-decoration: none;
+      &:link,
+      &:visited  {
+         display: flex;
+         align-items: center;
+         padding: 1.5rem 3rem;
+   
+         border-right: 1px solid #fff;
+         text-decoration: none;
+   
+         &:hover {
+            background-color: $off-white;
+         }
+      }
 
-      &:hover {
-         background-color: #f9f5f3;
+      &--active {
+         background-color: $off-white;
       }
    }
 

@@ -1,7 +1,28 @@
+import { Fraction } from 'fractional';
 import { elements } from './base';
 
 export const clearRecipe = () => {
    elements.recipe.innerHTML = '';
+};
+
+const formalCount = (count) => {
+   if (count) {
+      const [int, dec] = count
+         .toString()
+         .split('.')
+         .map(el => parseInt(el, 10));
+
+      if (!dec) return count;
+
+      if (int === 0) {
+         const fr = new Fraction(count);
+         return `${fr.numerator}/${fr.denominator}`;
+      }
+
+      const fr = new Fraction(count - int);
+      return `${int} ${fr.numerator}/${fr.denominator}`;
+   }
+   return '?';
 };
 
 const createIngredient = ingredient => `
