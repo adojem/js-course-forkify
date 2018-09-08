@@ -1,0 +1,76 @@
+.Shopping {
+   display: flex;
+   padding: 3rem 4rem;
+   flex-direction: column;
+
+   @at-root {
+
+      .Shopping__list {
+         list-style: none;
+         max-height: 77rem;
+         overflow: auto;
+      }
+
+      .Shopping__item {
+         position: relative;
+         display: flex;
+         align-items: flex-start;
+         padding: 1.3rem 0;
+         border-bottom: 1px solid $off-white-dark;
+      }
+
+      .Shopping__count {
+         display: flex;
+         flex: 0 0 7.5rem;
+         justify-content: space-between;
+         margin-right: 2rem;
+         padding: 0.4rem 0.5rem;
+         border-right: 1px solid $off-white-dark;
+         border-radius: 3px;
+         cursor: pointer;
+
+         & input {
+            width: 3.7rem;
+            color: inherit;
+            font-family: inherit;
+            font-size: 1.2rem;
+            text-align: center;
+            border: none;
+            border-radius: 3px;
+
+            &:focus {
+               outline: none;
+               background-color: $off-white-dark;
+            }
+         }
+
+         & p {
+            font-size: 1.2rem;
+         }
+      }
+
+      .Shopping__description {
+         flex: 1;
+         margin-top: 0.4rem;
+         margin-right: 1.5rem;
+         font-size: 1.3rem;
+      }
+
+      .Shopping__delete {
+         position: absolute;
+         right: 0;
+         width: 3.75rem;
+         margin-top: 0.5rem;
+         padding-left: 2rem;
+         background-image: linear-gradient(to right, transparent 0%, #fff 40%, #fff 100%);
+         visibility: hidden;
+         opacity: 0;
+         transition: all .5s;
+      }
+
+      .Shopping__item:hover .Shopping__delete {
+         opacity: 1;
+         visibility: visible;
+      }
+   }
+}
