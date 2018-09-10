@@ -17,10 +17,11 @@ export default class Search {
          //    },
          // });
          const res = await axios(
-            `https://www.food2fork.com/api/search?key=${apiKey}&q=${this.query}`
+            `https://www.food2fork.com/api/search?key=${apiKey}&q=${this.query}`,
          );
          this.result = res.data.recipes;
-      } catch (error) {
+      }
+      catch (error) {
          alert(error);
       }
    }
